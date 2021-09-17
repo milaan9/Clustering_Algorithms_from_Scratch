@@ -22,7 +22,7 @@
 Unsupervised learning is a branch of machine learning that learns from test data that has not been labeled, classified or categorized. Instead of responding to feedback, unsupervised learning identifies commonalities in the data and reacts based on the presence or absence of such commonalities in each new piece of data.
 
 # Clustering
-In clustering problems we split the training examples by unknown characteristics. The algorithm itself decides what characteristic to use for splitting.
+Clustering or cluster analysis is an unsupervised learning problem. It is often used as a data analysis technique for discovering interesting patterns in data, such as groups of customers based on their behavior. In clustering problems we split the training examples by unknown characteristics. The algorithm itself decides what characteristic to use for splitting.
 
 Usage examples: market segmentation, social networks analysis, organize computing clusters, astronomical data analysis, image compression, etc.
 
