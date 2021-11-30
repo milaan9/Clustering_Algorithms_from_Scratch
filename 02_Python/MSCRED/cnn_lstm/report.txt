@@ -1,0 +1,35 @@
+TensorFlow 2.0 Upgrade Script
+-----------------------------
+Converted 1 files
+Detected 3 issues that require attention
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+File: convlstm.py
+--------------------------------------------------------------------------------
+convlstm.py:73:21: WARNING: Using member tf.contrib.rnn.ConvLSTMCell in deprecated module tf.contrib.rnn. (Manual edit required) tf.contrib.rnn.* has been deprecated, and widely used cells/functions will be moved to tensorflow/addons repository. Please check it there and file Github issues if necessary.
+convlstm.py:73:21: ERROR: Using member tf.contrib.rnn.ConvLSTMCell in deprecated module tf.contrib. tf.contrib.rnn.ConvLSTMCell cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+convlstm.py:198:4: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+================================================================================
+Detailed log follows:
+
+================================================================================
+--------------------------------------------------------------------------------
+Processing file 'convlstm.py'
+ outputting to 'convlstm-update.py'
+--------------------------------------------------------------------------------
+
+17:13: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
+33:72: INFO: Changing tf.contrib.layers xavier initializer to a tf.compat.v1.keras.initializers.VarianceScaling and converting arguments.
+
+73:21: WARNING: Using member tf.contrib.rnn.ConvLSTMCell in deprecated module tf.contrib.rnn. (Manual edit required) tf.contrib.rnn.* has been deprecated, and widely used cells/functions will be moved to tensorflow/addons repository. Please check it there and file Github issues if necessary.
+73:21: ERROR: Using member tf.contrib.rnn.ConvLSTMCell in deprecated module tf.contrib. tf.contrib.rnn.ConvLSTMCell cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+84:21: INFO: Renamed 'tf.nn.dynamic_rnn' to 'tf.compat.v1.nn.dynamic_rnn'
+89:27: INFO: Added keywords to args of function 'tf.reduce_sum'
+109:13: INFO: Renamed keyword argument for tf.nn.conv2d_transpose from value to input
+109:13: INFO: Renamed keyword argument for tf.nn.conv2d_transpose from filter to filters
+143:11: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+164:11: INFO: Added keywords to args of function 'tf.reduce_mean'
+168:11: INFO: Renamed 'tf.global_variables_initializer' to 'tf.compat.v1.global_variables_initializer'
+198:4: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+--------------------------------------------------------------------------------
+
